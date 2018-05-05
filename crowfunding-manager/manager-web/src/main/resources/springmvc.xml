@@ -22,5 +22,5 @@
 	<mvc:annotation-driven/>
 	<!-- 映射静态资源，将静态资源交给tomcat -->
 	<mvc:default-servlet-handler/>
-
+	
 </beans>

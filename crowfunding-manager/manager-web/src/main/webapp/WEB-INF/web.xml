@@ -5,6 +5,9 @@
 	id="WebApp_ID" version="2.5">
 
 	<!-- 启动我们自己的listener -->
+	<listener>
+		<listener-class>com.laughing.crowfunding.manager.listener.MyAppListener</listener-class>
+	</listener>
 
 	<!-- 启动spring容器 -->
 	<!-- needed for ContextLoaderListener -->
