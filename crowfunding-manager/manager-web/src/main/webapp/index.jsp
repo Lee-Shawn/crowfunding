@@ -9,6 +9,7 @@
     <meta name="description" content="">
     <meta name="author" content="">
 	<%@include file="/WEB-INF/include/css-file.jsp" %>
+	<link rel="stylesheet" href="${ctp}/css/carousel.css">
 	<style>
     h3 {
         font-weight:bold;
