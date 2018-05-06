@@ -8,9 +8,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="">
     <meta name="author" content="">
-	<link rel="stylesheet" href="${ctp}/bootstrap/css/bootstrap.min.css">
-	<link rel="stylesheet" href="${ctp}/css/font-awesome.min.css">
-	<link rel="stylesheet" href="${ctp}/css/carousel.css">
+	<%@include file="/WEB-INF/include/css-file.jsp" %>
 	<style>
     h3 {
         font-weight:bold;
@@ -104,12 +102,12 @@ h3.break>a {
 			<nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
 			  <div class="container">
 				<div class="navbar-header">
-				  <a class="navbar-brand" href="${ctp}/index.html" style="font-size:32px;">尚筹网-创意产品众筹平台</a>
+				  <a class="navbar-brand" href="${ctp}/index.jsp" style="font-size:32px;">尚筹网-创意产品众筹平台</a>
 				</div>
             <div id="navbar" class="navbar-collapse collapse" style="float:right;">
               <ul class="nav navbar-nav navbar-right">
-                <li><a href="${ctp}/login.html">登录</a></li>
-                <li><a href="${ctp}/reg.html">注册</a></li>
+                <li><a href="${ctp}/login.jsp">登录</a></li>
+                <li><a href="${ctp}/reg.jsp">注册</a></li>
               </ul>
             </div>
 			  </div>
@@ -129,13 +127,13 @@ h3.break>a {
         <li data-target="#myCarousel" data-slide-to="2"></li>
       </ol>
       <div class="carousel-inner" role="listbox">
-        <div class="item active" onclick="window.location.href='project.html'" style="cursor:pointer;">
+        <div class="item active" onclick="window.location.href='project.jsp'" style="cursor:pointer;">
           <img src="${ctp}/img/carousel-1.jpg" alt="First slide">
         </div>
-        <div class="item" onclick="window.location.href='project.html'" style="cursor:pointer;">
+        <div class="item" onclick="window.location.href='project.jsp'" style="cursor:pointer;">
           <img src="${ctp}/img/carousel-2.jpg" alt="Second slide">
         </div>
-        <div class="item" onclick="window.location.href='project.html'" style="cursor:pointer;">
+        <div class="item" onclick="window.location.href='project.jsp'" style="cursor:pointer;">
           <img src="${ctp}/img/carousel-3.jpg" alt="Third slide">
         </div>
       </div>
@@ -162,19 +160,19 @@ h3.break>a {
           <img class="img-circle" src="${ctp}/img/p1.jpg" alt="Generic placeholder image" style="width: 140px; height: 140px;">
           <h2>智能高清监控机器人</h2>
           <p>可爱的造型，摄像安防远程互联的全能设计，让你随时随地守护您的家人，陪伴你的生活。</p>
-          <p><a class="btn btn-default" href="${ctp}/project.html" role="button">项目详情 &raquo;</a></p>
+          <p><a class="btn btn-default" href="${ctp}/project.jsp" role="button">项目详情 &raquo;</a></p>
         </div><!-- /.col-lg-4 -->
         <div class="col-lg-4">
           <img class="img-circle" src="${ctp}/img/p2.jpg" alt="Generic placeholder image" style="width: 140px; height: 140px;">
           <h2>NEOKA智能手环</h2>
           <p>要运动更要安全，这款、名为“蝶舞”的NEOKA-V9100智能运动手环为“安全运动而生”。</p>
-          <p><a class="btn btn-default" href="${ctp}/project.html" role="button">项目详情 &raquo;</a></p>
+          <p><a class="btn btn-default" href="${ctp}/project.jsp" role="button">项目详情 &raquo;</a></p>
         </div><!-- /.col-lg-4 -->
         <div class="col-lg-4">
           <img class="img-circle" src="${ctp}/img/p3.png" alt="Generic placeholder image" style="width: 140px; height: 140px;">
           <h2>驱蚊扣</h2>
           <p>随处使用的驱蚊纽扣，<br>解决夏季蚊虫问题。</p>
-          <p><a class="btn btn-default" href="${ctp}/project.html" role="button">项目详情 &raquo;</a></p>
+          <p><a class="btn btn-default" href="${ctp}/project.jsp" role="button">项目详情 &raquo;</a></p>
         </div><!-- /.col-lg-4 -->
       </div><!-- /.row -->
       
@@ -184,7 +182,7 @@ h3.break>a {
 			<div class="box ui-draggable" id="mainBox">
 				<div class="mHd" style="">
 					<div class="path">
-						<a href="${ctp}/projects.html">更多...</a>
+						<a href="${ctp}/projects.jsp">更多...</a>
 					</div>
 					<h3>
 						科技 <small style="color:#FFF;">开启智慧未来</small>
@@ -197,7 +195,7 @@ h3.break>a {
 						<img alt="300x200" src="${ctp}/img/product-1.jpg" />
 						<div class="caption">
 							<h3 class="break">
-								<a href="${ctp}/project.html">活性富氢净水直饮机</a>
+								<a href="${ctp}/project.jsp">活性富氢净水直饮机</a>
 							</h3>
                             <p>
                                 <div style="float:left;"><i class="glyphicon glyphicon-screenshot" title="目标金额" ></i> $20,000 </div>
@@ -218,7 +216,7 @@ h3.break>a {
 						<img alt="300x200" src="${ctp}/img/product-2.gif" />
 						<div class="caption">
 							<h3 class="break">
-								<a href="${ctp}/project.html">酷驰触控龙头，智享厨房黑科技</a>
+								<a href="${ctp}/project.jsp">酷驰触控龙头，智享厨房黑科技</a>
 							</h3>
                             <p>
                                 <div style="float:left;"><i class="glyphicon glyphicon-screenshot" title="目标金额" ></i> $20,000 </div>
@@ -239,7 +237,7 @@ h3.break>a {
 						<img alt="300x200" src="${ctp}/img/product-3.png" />
 						<div class="caption">
 							<h3 class="break">
-								<a href="${ctp}/project.html">小熊猫鱼眼全景安防摄像机</a>
+								<a href="${ctp}/project.jsp">小熊猫鱼眼全景安防摄像机</a>
 							</h3>
                             <p>
                                 <div style="float:left;"><i class="glyphicon glyphicon-screenshot" title="目标金额" ></i> $20,000 </div>
@@ -260,7 +258,7 @@ h3.break>a {
 						<img alt="300x200" src="${ctp}/img/product-4.jpg" />
 						<div class="caption">
 							<h3 class="break">
-								<a href="${ctp}/project.html">一款精致的机械表</a>
+								<a href="${ctp}/project.jsp">一款精致的机械表</a>
 							</h3>
                             <p>
                                 <div style="float:left;"><i class="glyphicon glyphicon-screenshot" title="目标金额" ></i> $20,000 </div>
@@ -290,7 +288,7 @@ h3.break>a {
 			<div class="box ui-draggable" id="mainBox">
 				<div class="mHd" style="">
 					<div class="path">
-						<a href="${ctp}/projects.html">更多...</a>
+						<a href="${ctp}/projects.jsp">更多...</a>
 					</div>
 					<h3>
 						设计 <small style="color:#FFF;">创意改变生活</small>
@@ -303,7 +301,7 @@ h3.break>a {
 						<img alt="300x200" src="${ctp}/img/product-5.jpg" />
 						<div class="caption">
 							<h3 class="break">
-								<a href="${ctp}/project.html">活性富氢净水直饮机</a>
+								<a href="${ctp}/project.jsp">活性富氢净水直饮机</a>
 							</h3>
                             <p>
                                 <div style="float:left;"><i class="glyphicon glyphicon-screenshot" title="目标金额" ></i> $20,000 </div>
@@ -324,7 +322,7 @@ h3.break>a {
 						<img alt="300x200" src="${ctp}/img/product-6.jpg" />
 						<div class="caption">
 							<h3 class="break">
-								<a href="${ctp}/project.html">酷驰触控龙头，智享厨房黑科技</a>
+								<a href="${ctp}/project.jsp">酷驰触控龙头，智享厨房黑科技</a>
 							</h3>
                             <p>
                                 <div style="float:left;"><i class="glyphicon glyphicon-screenshot" title="目标金额" ></i> $20,000 </div>
@@ -345,7 +343,7 @@ h3.break>a {
 						<img alt="300x200" src="${ctp}/img/product-7.jpg" />
 						<div class="caption">
 							<h3 class="break">
-								<a href="${ctp}/project.html">小熊猫鱼眼全景安防摄像机</a>
+								<a href="${ctp}/project.jsp">小熊猫鱼眼全景安防摄像机</a>
 							</h3>
                             <p>
                                 <div style="float:left;"><i class="glyphicon glyphicon-screenshot" title="目标金额" ></i> $20,000 </div>
@@ -366,7 +364,7 @@ h3.break>a {
 						<img alt="300x200" src="${ctp}/img/product-8.jpg" />
 						<div class="caption">
 							<h3 class="break">
-								<a href="${ctp}/project.html">一款精致的机械表</a>
+								<a href="${ctp}/project.jsp">一款精致的机械表</a>
 							</h3>
                             <p>
                                 <div style="float:left;"><i class="glyphicon glyphicon-screenshot" title="目标金额" ></i> $20,000 </div>
@@ -396,7 +394,7 @@ h3.break>a {
 			<div class="box ui-draggable" id="mainBox">
 				<div class="mHd" style="">
 					<div class="path">
-						<a href="${ctp}/projects.html">更多...</a>
+						<a href="${ctp}/projects.jsp">更多...</a>
 					</div>
 					<h3>
 						农业 <small style="color:#FFF;">网络天下肥美</small>
@@ -409,7 +407,7 @@ h3.break>a {
 						<img alt="300x200" src="${ctp}/img/product-9.jpg" />
 						<div class="caption">
 							<h3 class="break">
-								<a href="${ctp}/project.html">活性富氢净水直饮机</a>
+								<a href="${ctp}/project.jsp">活性富氢净水直饮机</a>
 							</h3>
                             <p>
                                 <div style="float:left;"><i class="glyphicon glyphicon-screenshot" title="目标金额" ></i> $20,000 </div>
@@ -430,7 +428,7 @@ h3.break>a {
 						<img alt="300x200" src="${ctp}/img/product-2.gif" />
 						<div class="caption">
 							<h3 class="break">
-								<a href="${ctp}/project.html">酷驰触控龙头，智享厨房黑科技</a>
+								<a href="${ctp}/project.jsp">酷驰触控龙头，智享厨房黑科技</a>
 							</h3>
                             <p>
                                 <div style="float:left;"><i class="glyphicon glyphicon-screenshot" title="目标金额" ></i> $20,000 </div>
@@ -451,7 +449,7 @@ h3.break>a {
 						<img alt="300x200" src="${ctp}/img/product-3.png" />
 						<div class="caption">
 							<h3 class="break">
-								<a href="${ctp}/project.html">小熊猫鱼眼全景安防摄像机</a>
+								<a href="${ctp}/project.jsp">小熊猫鱼眼全景安防摄像机</a>
 							</h3>
                             <p>
                                 <div style="float:left;"><i class="glyphicon glyphicon-screenshot" title="目标金额" ></i> $20,000 </div>
@@ -472,7 +470,7 @@ h3.break>a {
 						<img alt="300x200" src="${ctp}/img/product-4.jpg" />
 						<div class="caption">
 							<h3 class="break">
-								<a href="${ctp}/project.html">一款精致的机械表</a>
+								<a href="${ctp}/project.jsp">一款精致的机械表</a>
 							</h3>
                             <p>
                                 <div style="float:left;"><i class="glyphicon glyphicon-screenshot" title="目标金额" ></i> $20,000 </div>
@@ -502,7 +500,7 @@ h3.break>a {
 			<div class="box ui-draggable" id="mainBox">
 				<div class="mHd" style="">
 					<div class="path">
-						<a href="${ctp}/projects.html">更多...</a>
+						<a href="${ctp}/projects.jsp">更多...</a>
 					</div>
 					<h3>
 						其他 <small style="color:#FFF;">发现更多惊喜</small>
@@ -515,7 +513,7 @@ h3.break>a {
 						<img alt="300x200" src="${ctp}/img/product-1.jpg" />
 						<div class="caption">
 							<h3 class="break">
-								<a href="${ctp}/project.html">活性富氢净水直饮机</a>
+								<a href="${ctp}/project.jsp">活性富氢净水直饮机</a>
 							</h3>
                             <p>
                                 <div style="float:left;"><i class="glyphicon glyphicon-screenshot" title="目标金额" ></i> $20,000 </div>
@@ -536,7 +534,7 @@ h3.break>a {
 						<img alt="300x200" src="${ctp}/img/product-2.gif" />
 						<div class="caption">
 							<h3 class="break">
-								<a href="${ctp}/project.html">酷驰触控龙头，智享厨房黑科技</a>
+								<a href="${ctp}/project.jsp">酷驰触控龙头，智享厨房黑科技</a>
 							</h3>
                             <p>
                                 <div style="float:left;"><i class="glyphicon glyphicon-screenshot" title="目标金额" ></i> $20,000 </div>
@@ -557,7 +555,7 @@ h3.break>a {
 						<img alt="300x200" src="${ctp}/img/product-3.png" />
 						<div class="caption">
 							<h3 class="break">
-								<a href="${ctp}/project.html">小熊猫鱼眼全景安防摄像机</a>
+								<a href="${ctp}/project.jsp">小熊猫鱼眼全景安防摄像机</a>
 							</h3>
                             <p>
                                 <div style="float:left;"><i class="glyphicon glyphicon-screenshot" title="目标金额" ></i> $20,000 </div>
@@ -578,7 +576,7 @@ h3.break>a {
 						<img alt="300x200" src="${ctp}/img/product-4.jpg" />
 						<div class="caption">
 							<h3 class="break">
-								<a href="${ctp}/project.html">一款精致的机械表</a>
+								<a href="${ctp}/project.jsp">一款精致的机械表</a>
 							</h3>
                             <p>
                                 <div style="float:left;"><i class="glyphicon glyphicon-screenshot" title="目标金额" ></i> $20,000 </div>
@@ -621,15 +619,12 @@ h3.break>a {
 
     </div><!-- /.container -->
 
-
-    <script src="${ctp}/jquery/jquery-2.1.1.min.js"></script>
-    <script src="${ctp}/bootstrap/js/bootstrap.min.js"></script>
-	<script src="${ctp}/script/docs.min.js"></script>
-    <script src="${ctp}/script/back-to-top.js"></script>
+	<%@include file="/WEB-INF/include/js-file.jsp" %>
+    
     <script>
     $(".thumbnail img").css("cursor", "pointer");
     $(".thumbnail img").click(function(){
-        window.location.href = "project.html";
+        window.location.href = "project.jsp";
     });
     </script>
   </body>
