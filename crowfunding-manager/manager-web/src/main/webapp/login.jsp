@@ -1,5 +1,6 @@
 ﻿<%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <!DOCTYPE html>
 <html lang="zh-CN">
   <head>
@@ -10,7 +11,7 @@
     <meta name="keys" content="">
     <meta name="author" content="">
 	<%@include file="/WEB-INF/include/css-file.jsp" %>
-	<link rel="stylesheet" href="css/login.css">
+	<link rel="stylesheet" href="${ctp }/css/login.css">
 	<style>
 
 	</style>
@@ -19,27 +20,37 @@
     <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
       <div class="container">
         <div class="navbar-header">
-          <div><a class="navbar-brand" href="index.jsp" style="font-size:32px;">尚筹网-创意产品众筹平台</a></div>
+          <div><a class="navbar-brand" href="${ctp }/index.jsp" style="font-size:32px;">尚筹网-创意产品众筹平台</a></div>
         </div>
       </div>
     </nav>
 
     <div class="container">
 
-      <form class="form-signin" role="form">
+      <form class="form-signin" role="form" action="${ctp}/permission/user/login" method="post">
         <h2 class="form-signin-heading"><i class="glyphicon glyphicon-log-in"></i> 用户登录</h2>
 		  <div class="form-group has-success has-feedback">
-			<input type="text" class="form-control" id="inputSuccess4" placeholder="请输入登录账号" autofocus>
+			<input id="loginacct_input" type="text" name="loginacct" class="form-control" 
+				value="${errorUser.loginacct }" placeholder="请输入登录账号" autofocus>
 			<span class="glyphicon glyphicon-user form-control-feedback"></span>
+			<span style="color: red;">${msg }</span>
+			<!-- 取出一次就将session中的这个属性移除 -->
+			<!-- 
+		     var="msg"：指定要从域中移除的key
+			 scope=""：指定从哪个域中移除，不写默认会从所有域中移除
+			-->
+			<c:remove var="msg"/>
+			<c:remove var="errorUser"/>
 		  </div>
 		  <div class="form-group has-success has-feedback">
-			<input type="text" class="form-control" id="inputSuccess4" placeholder="请输入登录密码" style="margin-top:10px;">
+			<input id="userpswd_input" type="password" name="userpswd" class="form-control" 
+				placeholder="请输入登录密码" style="margin-top:10px;">
 			<span class="glyphicon glyphicon-lock form-control-feedback"></span>
 		  </div>
 		  <div class="form-group has-success has-feedback">
 			<select class="form-control" >
                 <option value="member">会员</option>
-                <option value="user">管理</option>
+                <option value="manager">管理</option>
             </select>
 		  </div>
         <div class="checkbox">
@@ -61,11 +72,14 @@
     <script>
     function dologin() {
         var type = $(":selected").val();
-        if ( type == "user" ) {
-            window.location.href = "main.jsp";
+        if ( type == "manager" ) {
+        	$("form:first").submit();
+            //window.location.href = "main.jsp";
         } else {
-            window.location.href = "index.jsp";
+        	// 超链接跳转到指定的地址
+            window.location.href = "${ctp}/index.jsp";
         }
+        return false;
     }
     </script>
   </body>

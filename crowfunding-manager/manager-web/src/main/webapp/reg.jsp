@@ -10,7 +10,7 @@
 <meta name="keys" content="">
 <meta name="author" content="">
 <%@include file="/WEB-INF/include/css-file.jsp"%>
-<link rel="stylesheet" href="css/login.css">
+<link rel="stylesheet" href="${ctp }/css/login.css">
 <style>
 </style>
 </head>
@@ -19,7 +19,7 @@
 		<div class="container">
 			<div class="navbar-header">
 				<div>
-					<a class="navbar-brand" href="index.html" style="font-size: 32px;">尚筹网-创意产品众筹平台</a>
+					<a class="navbar-brand" href="${ctp}/index.jsp" style="font-size: 32px;">尚筹网-创意产品众筹平台</a>
 				</div>
 			</div>
 		</div>
@@ -33,19 +33,19 @@
 			</h2>
 			<div class="form-group has-success has-feedback">
 				<input id="loginacct_input" type="text" name="loginacct" class="form-control" 
-					placeholder="请输入登录账号" autofocus>
+					value="${TUser.loginacct }" placeholder="请输入登录账号" autofocus>
 				<span class="glyphicon glyphicon-user form-control-feedback"></span>
-				<span class="errorInfo" style="color:red"></span>
+				<span id="loginMsg" class="errorInfo" style="color:red"></span>
 			</div>
 			<div class="form-group has-success has-feedback">
-				<input id="userpswd_input" type="text" name="userpswd" class="form-control" 
+				<input id="userpswd_input" type="password" name="userpswd" class="form-control" 
 					placeholder="请输入登录密码" style="margin-top: 10px;">
 				<span class="glyphicon glyphicon-lock form-control-feedback"></span>
 				<span class="errorInfo" style="color:red"></span>
 			</div>
 			<div class="form-group has-success has-feedback">
 				<input id="email_input" type="text" name="email" class="form-control" 
-					placeholder="请输入邮箱地址" style="margin-top: 10px;">
+					value="${TUser.email }" placeholder="请输入邮箱地址" style="margin-top: 10px;">
 				<span class="glyphicon glyphicon glyphicon-envelope form-control-feedback"></span>
 				<span class="errorInfo" style="color:red"></span>
 			</div>
@@ -86,7 +86,12 @@
 		});	
 	
 		$("#submitBtn").click(function(){
-			$("#regForm").submit();
+			var loginType = $("select.form-control").val();
+			if (loginType == "管理") {
+				$("#regForm").submit();
+			} else {
+				alert("会员注册尚未开通");
+			}
 			return false;
 		});
 		
@@ -120,6 +125,16 @@
 				}
 			}
 		});
+		
+		/* $(document).ready(function(){
+			$("#loginacct_input").click(function(){
+		    	htmlobj=$.ajax({
+		    		url:"${ctp}/permission/user/reg",
+		    		async:false
+		    	});
+		    	$("#loginMsg").html(htmlobj.responseText);
+		    });
+		}); */
 	</script>
 </body>
 </html>
