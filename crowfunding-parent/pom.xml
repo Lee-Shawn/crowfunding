@@ -5,6 +5,7 @@
 		<groupId>com.laughing</groupId>
 		<artifactId>project-parent</artifactId>
 		<version>0.0.1-SNAPSHOT</version>
+		<relativePath>../project-parent/pom.xml</relativePath>
 	</parent>
 	<groupId>com.laughing.crowfunding</groupId>
 	<artifactId>crowfunding-parent</artifactId>

@@ -30,7 +30,7 @@
 		<!-- 数据库 -->
 		<!--druid：德鲁伊  -->
 		<druid.version>1.1.0</druid.version>
-		<mysql.connector>5.1.42</mysql.connector>
+		<mysql.connector>5.1.38</mysql.connector>
 
 		<!-- 基础框架 -->
 		<spring.version>4.3.8.RELEASE</spring.version>
