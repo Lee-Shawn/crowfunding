@@ -8,6 +8,8 @@
 		<groupId>com.laughing.crowfunding</groupId>
 		<artifactId>crowfunding-parent</artifactId>
 		<version>0.0.1-SNAPSHOT</version>
+		<!-- 使用相对路径引入父pom -->
+		<relativePath>../crowfunding-parent/pom.xml</relativePath>
 	</parent>
 	<modules>
 		<module>manager-pojo</module>
