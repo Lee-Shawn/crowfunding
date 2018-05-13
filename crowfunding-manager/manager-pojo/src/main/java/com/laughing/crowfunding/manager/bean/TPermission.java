@@ -1,5 +1,7 @@
 package com.laughing.crowfunding.manager.bean;
 
+import java.util.List;
+
 public class TPermission {
     private Integer id;
 
@@ -10,6 +12,16 @@ public class TPermission {
     private String icon;
 
     private String url;
+    
+    public List<TPermission> childs;
+
+    public List<TPermission> getChilds() {
+        return childs;
+    }
+    
+    public void setChilds(List<TPermission> childs) {
+        this.childs = childs;
+    }
 
     public Integer getId() {
         return id;
@@ -50,4 +62,5 @@ public class TPermission {
     public void setUrl(String url) {
         this.url = url == null ? null : url.trim();
     }
+
 }
